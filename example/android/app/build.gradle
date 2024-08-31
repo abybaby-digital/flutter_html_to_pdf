@@ -33,7 +33,7 @@ android {
             pickFirst 'lib/armeabi-v7a/libc++_shared.so'
             pickFirst 'lib/arm64-v8a/libc++_shared.so'
     }
-    compileSdkVersion 33
+    compileSdkVersion 34
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

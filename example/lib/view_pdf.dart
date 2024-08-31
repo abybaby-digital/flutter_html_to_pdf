@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
@@ -28,9 +27,10 @@ class _ViewPDFState extends State<ViewPDF> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share),
-            onPressed: () async{
-
-await Share.file('Invoice', 'invoice.pdf', File(widget.path??'').readAsBytesSync(), 'pdf', text: 'New invoice');
+            onPressed: () async {
+              await Share.file('Invoice', 'invoice.pdf',
+                  File(widget.path ?? '').readAsBytesSync(), 'pdf',
+                  text: 'New invoice');
             },
           ),
         ],
